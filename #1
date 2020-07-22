@@ -1,0 +1,110 @@
+Pengertian VLAN
+VLAN (Virtual Local Area Network) merupakan sekelompok perangkat pada satu LAN atau lebih yang dikonfigurasikan (menggunakan perangkat lunak pengelolaan) sehingga dapat berkomunikasi seperti halnya bila perangkat tersebut terhubung ke jalur yang sama, padahal sebenarnya perangkat tersebut berada pada sejumlah segmen LAN yang berbeda. Vlan dibuat dengan menggunakan jaringan pihak ke tiga. VLAN merupakan sebuah bagian kecil jaringan IP yang terpisah secara logik. VLAN memungkinkan beberapa jaringan IP dan jaringan-jaringan kecil (subnet) berada dalam jaringan switched switched yang sama. Agar computer bisa berkomunikasi pada VLAN yang sama, setiap computer harus memiliki sebuah alamat IP dan Subnet Mask yang sesuai dengan VLAN tersebut. Switch harus dikonfigurasi dengan VLAN dan setiap port dalam VLAN harus didaftarkan ke VLAN. Sebuah port switch yang telah dikonfigurasi dengan sebuah VLAN tunggal disebut sebagai access port.
+
+Keuntungan Menggunakan VLAN
+ Berikut ini beberapa keuntungan menggunakan VLAN:
+
+•Security : keamanan data dari setiap divisi dapat dibuat tersendiri, karena segmennya bisa dipisah secarfa logika. Lalu lintas data dibatasi segmennya.
+
+• Cost reduction : penghematan biaya dihasilkan dari tidak diperlukannya biaya yang mahal untuk upgrades jaringan dan efisiensi penggunaan bandwidth dan uplink yang tersedia.
+
+• Higher performance : pembagian jaringan layer 2 ke dalam beberapa kelompok broadcast domain yang lebih kecil, yang tentunya akan mengurangi lalu lintas packet yang tidak dibutuhkan dalam jaringan.
+
+• Broadcast storm mitigation : pembagian jaringan ke dalam VLAN-VLAN akan mengurangi banyaknya device yang berpartisipasi dalam pembuatan broadcast storm. Hal ini terjadinya karena adanya pembatasan broadcast domain.
+
+• Improved IT staff efficiency : VLAN memudahkan manajemen jaringan karena pengguna yang membutuhkan sumber daya yang dibutuhkan berbagi dalam segmen yang sama.
+
+• Simpler project or application management : VLAN menggabungkan para pengguna jaringan dan peralatan jaringan untuk mendukung perusahaan dan menangani permasalahan kondisi geografis.
+
+Jenis VLAN
+Berdasarkan perbedaan pemberian membership VLAN terbagi menjadi lima, yaitu :
+
+Port based : Dengan melakukan konfigurasi pada port dan memasukkannya pada kelompok VLAN sendiri. Apabila port tersebut akan dihubungkan dengan beberapa VLAN maka port tersebut harus berubah fungsi menjadi port trunk (VTP).
+MAC based : Membership atau pengelompokan pada jenis ini didasarkan pada MAC Address. Tiap switch memiliki tabel MAC Address tiap komputer beserta kelompok VLAN tempat komputer itu berada.
+Protocol based : Karena VLAN bekerja pada layer 2 (OSI) maka penggunaan protokol (IP dan IP Extended) sebagai dasar VLAN dapat dilakukan.
+IP Subnet Address based : Selaij bekerja pada layer 2, VLAN dapat bekerja pada layer 3, sehingga alamat subnet dapat digunakan sebagai dasar VLAN.
+Authentication based : Device atau komputer bisa diletakkan secara otomatis di dalam jaringan VLAN yang didasarkan pada autentifikasi user atau komputer menggunakan protokol 802.1x.
+VLAN ID
+Untuk memberi identitas sebuah VLAN digunakan nomor identitas VLAN yang dinamakan VLAN ID. Digunakan untuk menandai VLAN yang terkait. Dua range VLAN ID adalah:
+
+a. Normal Range VLAN (1 – 1005)
+
+  Digunakan untuk jaringan skala kecil dan menengah.
+
+Nomor ID 1002 s.d. 1005 dicadangkan untuk Token Ring dan FDDI VLAN.
+ID 1, 1002 – 1005 secara default sudah ada dan tidak dapat dihilangkan.
+Konfigurasi disimpan di dalam file database VLAN, yaitu vlan.dat. file ini disimpan dalam memori flash milkik switch.
+VLAN trunking protocol (VTP), yang membantu manajemen VLAN, hanya dapat bekerja pada normal range VLAN dan menyimpannya dalam file database VLAN.
+b. Extended Range VLANs (1006 – 4094)
+
+Memungkinkan para service provider untuk memperluas infrastrukturnya kepada konsumen yang lebih banyak. Dibutuhkan untuk perusahaan skala besar yang membutuhkan jumlah VLAN lebih dari normal.Memiliki fitur yang lebih sedikit dibandingakn VLAN normal range.
+
+Disimpan dalam NVRAM (file running configuration).
+VTP tidak bekerja di sini.
+Terminologi VLAN
+Berikut ini terminologi di dalam VLAN :
+
+a. VLAN Data
+VLAN Data adalah VLAN yang dikonfigurasi hanya untuk membawa data-data yang digunakan oleh user. Dipisahkan dengan lalu lintas data suara atau pun manajemen switch. Seringkali disebut dengan VLAN pengguna, User VLAN.
+
+b. VLAN Default
+Semua port switch pada awalnya menjadi anggota VLAN Default. VLAN Default untuk Switch Cisco adalah VLAN 1. VLAN 1 tidak dapat diberi nama dan tidak dapat dihapus.
+
+c. Native VLAN
+Native VLAN dikeluarkan untuk port trunking 802.1Q. port trunking 802.1Q mendukung lalu lintas jaringan yang datang dari banyak VLAN (tagged traffic) sama baiknya dengan yang datang dari sebuah VLAN (untagged traffic). Port trunking 802.1Q menempatkan untagged traffic pada Native VLAN.
+
+d. VLAN Manajemen
+VLAN Manajemen adalah VLAN yang dikonfigurasi untuk memanajemen switch. VLAN 1 akan bekerja sebagai Management VLAN jika kita tidak mendefinisikan VLAN khusus sebagai VLAN Manajemen. Kita dapat memberi IP address dan subnet mask pada VLAN Manajemen, sehingga switch dapat dikelola melalui HTTP, Telnet, SSH, atau SNMP.
+
+e. VLAN Voice
+VLAN yang dapat mendukung Voice over IP (VoIP). VLAN yang dikhusukan untuk komunikasi data suara.
+
+Tipe Koneksi VLAN
+Tipe koneksi dari VLAN dapat di bagi menjadi 3 yaitu :
+1. Trunk Link
+2. Access Link
+3. Hibrid Link (Gabungan Trunk dengan Access)
+
+Prinsip Kerja VLAN
+1. Filtering Database
+    Berisi informasi tentang pengelompokan VLAN. Terdiri dari:
+    a. Static Entries
+	Static Filtering Entries: Mespesifisifikasikan apakah suatu data itu akan dikirim atau dibuang atau juga di masukkan ke dalam
+	dinamic entries
+	Static Registration Entries: Mespesifisifikasikan apakah suatu data itu akan dikirim ke suatu jaringan VLAN dan port yang
+	bertanggung jawab untuk jaringan VLAN tersebut
+
+     b. Dynamic Entries
+	Dynamic Filtering Entries: Mespesifisifikasikan apakah suatu data itu akan dikirim atau dibuang
+	Group Registration Entries: Mespesifisifikasikan apakah suatu data yang dikirim ke suatu group atau VLAN tertentu akan
+	dikirim/diteruskan atau tidak
+	Dynamic Registration Entries: Menspesifikasikan port yang bertanggung jawab untuk suatu jaringan VLAN
+
+2. Tagging
+
+Saat sebuah data dikirimkan maka harus ada yang menyatakan Tujuan data tersebut (VLAN tujuan). Informasi ini diberikan dalam bentuk tag header, sehingga informasi dapat dikirimkan ke user tertentu saja (user tujuan), didalamnya berisi format MAC Address.
+
+Jenis dari tag header :
+a. Ethernet Frame Tag Header
+b. Token Ring and Fiber Distributed Data Interface (FDDI) tag header Networking
+
+Contoh Konfigurasi VLAN
+a. Static VLAN – port switch dikonfigurasi secara manual.
+     SwUtama#config Terminal
+     Enter configuration commands, one per line. End with CTRL/Z.
+     Sw02(config)#VLAN 10
+     Sw02(config-vlan)#name VLAN_Mahasiswa
+     Sw02(config-vlan)#exit
+     Sw02(config)#Interface fastEthernet 0/2
+     Sw02(config-if)#switchport mode access
+     Sw02(config-if)#switchport access VLAN 10
+
+b. Dynamic VLAN
+Mode ini digunakan secara luas di jaringan skala besar. Keanggotaan port Dynamic VLAN  dibuat dengan menggunakan server khusus yang disebut VLAN Membership Policy Server (VMPS). Dengan menggunakan VMPS, kita dapat menandai port switch dengan VLAN? secara dinamis berdasar pada MAC Address sumber yang terhubung dengan port.
+
+c. Voice VLAN – port dikonfigurasi dalam mode voice sehingga dapat mendukung IP phone  yang terhubung.
+     Sw02(config)#VLAN 120
+     Sw02(config-vlan)#name VLAN_Voice
+     Sw02(config-vlan)#exit
+     Sw02(config)#Interface fastEthernet 0/3
+     Sw02(config-if)#switchport voice VLAN 120
