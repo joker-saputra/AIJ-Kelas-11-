@@ -6,6 +6,17 @@ A. Mengenal Routing
 1. Mengenal perangkat router
    Router merupakan hardware yang berfungsi untuk membangun dua Network atau lebih yang berbeda Network ID atau arsitekturnya. Router dirancang untuk menerima, menganalisis, dan memindahkan paket yang masuk ke jaringan lain. Router juga memiliki kemampuan yang jauh lebih unggul daripada perangkat jaringan lainnya, seperti hub atau switch yang hanya mampu melakukan fungsi jaringan dasar. Router juga dapat menganalisis data yang dikirim melalui jaringan, mengubah paketnya, dan mengirimkan ke jaringan lain atau melalui jaringan yang berbeda.
 
-   a. Fungsi Router
-      Router sangat banyak digunakan dalam jaringan berbasis teknologi TCP/IP. Router dapat digunakan untuk menghubungkan banyak jaringan kecil ke sebuah jaringan yang lebih besar, yang disebut dengan internetwork, atau untuk membagi sebuah jaringan besar kedalam beberapa subnetwork untuk meningkatkan kinerja dan mempermudah dalam melakukan manajemen jaringan.
+a. Fungsi Router
+   Router sangat banyak digunakan dalam jaringan berbasis teknologi TCP/IP. Router dapat digunakan untuk menghubungkan banyak jaringan kecil ke sebuah jaringan yang lebih besar, yang disebut dengan internetwork, atau untuk membagi sebuah jaringan besar kedalam beberapa subnetwork untuk meningkatkan kinerja dan mempermudah dalam melakukan manajemen jaringan.
       
+b. Cara Kerja Router
+   Fungsi utama router adalah merupakan paket atau data. Sebuah router memiliki kemampuan routing, artinya router cara cerdas dapat mengetahui ke mana rute perjalanan paket atau data akan dilewatkan, apakah tujuan untuk host lain yang satu Network ataukah berada di network yang berbeda.
+   
+Berikut ini adalah prinsip kerja dari router
+1. Menggunakan alamat network yang berbeda pada semua port.
+2. Membuat tabel berdasarkan alamat layer network.
+3. Memfilter lalu lintas Network Berdasarkan informasi Network.
+4. Memblokir lalu lintas ke alamat yang tidak diketahui.
+
+2. Pengertian routing
+Routing adalah proses dimana suatu router mem-forward paket ke jaringan yang dituju. Routing merupakan suatu protokol yang digunakan untuk mendapatkan rute dari suatu jaringan ke jaringan lain. Suatu router membuat keputusan berdasarkan IP address yang dituju oleh paket. Routing bertanggung jawab membawa data melewati sekumpulan jaringan dengan cara memilih jalur terbaik untuk dilewati data
