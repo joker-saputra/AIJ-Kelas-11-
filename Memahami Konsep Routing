@@ -1,4 +1,11 @@
 MEMAHAMI KONSEP ROUTING
 
 A. Mengenal Routing
-   Membangun sebuah infrastruktur jaringan tak lepas dari perangkat
+   Membangun sebuah infrastruktur jaringan tentunya tak lepas dari perangkat perangkat jaringan seperti switch, hub, router, dan lain sebagainya. Pada materi kita kali ini akan membahas fungsi perangkat router. Dalam sebuah jaringan, antar komputer diharuskan untuk dapat saling berkomunikasi agar mempermudah dalam pengiriman sebuah paket.
+
+1. Mengenal perangkat router
+   Router merupakan hardware yang berfungsi untuk membangun dua Network atau lebih yang berbeda Network ID atau arsitekturnya. Router dirancang untuk menerima, menganalisis, dan memindahkan paket yang masuk ke jaringan lain. Router juga memiliki kemampuan yang jauh lebih unggul daripada perangkat jaringan lainnya, seperti hub atau switch yang hanya mampu melakukan fungsi jaringan dasar. Router juga dapat menganalisis data yang dikirim melalui jaringan, mengubah paketnya, dan mengirimkan ke jaringan lain atau melalui jaringan yang berbeda.
+
+   a. Fungsi Router
+      Router sangat banyak digunakan dalam jaringan berbasis teknologi TCP/IP. Router dapat digunakan untuk menghubungkan banyak jaringan kecil ke sebuah jaringan yang lebih besar, yang disebut dengan internetwork, atau untuk membagi sebuah jaringan besar kedalam beberapa subnetwork untuk meningkatkan kinerja dan mempermudah dalam melakukan manajemen jaringan.
+      
