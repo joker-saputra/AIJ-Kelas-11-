@@ -1,0 +1,20 @@
+memahami konsep routing
+ mengenal routing, membangun sebuah infrastruktur jaringan tentunya tak lepas dari perangkat perangkat jaringan seperti switch, hub, router, dan lain sebagainya. Pak dapat membangun infrastruktur jaringan vlan, kita sudah membahas mengenai fungsi switch. Pada bab ini, kita akan membahas fungsi perangkat router. Dalam sebuah jaringan, antar komputer diharuskan untuk dapat saling berkomunikasi, agar mempermudah dalam pengiriman sebuah paket.
+1. Mengenal perangkat router
+Router merupakan hardware yang berfungsi untuk menghubungkan dua Network atau lebih yang berbeda Network id atau arsitekturnya. Router dirancang untuk menerima, menganalisis, dan memindahkan paket yang masuk ke jaringan lain. Router memiliki kemampuan yang jauh lebih tinggi daripada perangkat jaringan lainnya, seperti hub atau switch yang hanya mampu melakukan fungsi jaringan dasar. Router dapat menganalisis data yang dikirim melalui jaringan, mengubah paketnya, dan mengirimkan ke jaringan lain atau melalui jaringan yang berbeda.
+
+a.  fungsi router
+router sangat banyak digunakan dalam jaringan berbasis teknologi tcp/ip. router dapat digunakan untuk menghubungkan banyak jaringan kecil ke sebuah jaringan yang lebih besar,  yang disebut dengan internetwork, atau untuk membagi sebuah jaringan besar kedalam beberapa subnetwork untuk meningkatkan kinerja dan mempermudah dalam melakukan manajemen jaringan.
+
+b.  cara kerja router
+
+fungsi utama router adalah merupakan paket atau data.  sebuah router memiliki kemampuan routing,  artinya router secara cerdas dapat mengetahui ke mana rute perjalanan paket atau data yang akan dilewatkan,  Apakah ditujukan untuk host lain yang satu Network ataukah berada di network yang berbeda.
+
+
+pada dasarnya router akan memilih jalur tercepat agar paket yang kita kirimkan dari subnet yang satu ke satnet yang lainnya dapat terkirim secara optimal.
+
+berikut adalah prinsip kerja dari router: 
+1. menggunakan alamat network yang berbeda pada semua port.
+2. membuat tabel berdasarkan alamat layer network.
+3. memfilter lalu lintas Network Berdasarkan informasi Network.
+4. memblokir lalu lintas ke alamat yang tidak diketahui.
