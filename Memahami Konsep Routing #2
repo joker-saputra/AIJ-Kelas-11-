@@ -1,0 +1,37 @@
+Pengelompokan routing
+Secara umum routing dikelompokkan menjadi tiga jenis routing berdasarkan table routingnya.
+a.	Default Route
+Adalah jalur default untuk paket yang mempunya alamat network tujuan tertentu tapi tidak terdapat di routing table route yang dituju. Jika terdapat default route yang dikonfigurasikan pada route tersebut, maka peket tersebut akan mengikuti route default yang telah di tetapkan.
+
+b.	Static Route
+Static route adalah suatu mekanisme routing yang tergantung dengan routing table dengan konfigurasi manual. Static routing haruslah dikonfigurasikan secara manual dan dirawat secara terpisah dikarenakan tidak melakukan pertukaran informasi.
+
+Keuntungan menggunakan routing statis adalah:
+1.	Meringankan kerja processor yang ada pada router.
+2.	Tidak ada bandwidth yang digunakan untuk pertukaran informasi.
+3.	Tingkatan keamanan lebih tinggi dibandingkan mekanisme lainnya.
+Kekurangan menggunakan routing statis adalah:
+1.	Administrator harus mengetahui informasi tiap-tiap router.
+2.	Adanya penambahan atau perubahan yang dilakukan secara manual oleh administrator.
+3.	Tidak disarankan untuk membangun jaringan yang lebih besar.
+
+c.	Dynamic routing
+Adalah routing protocol yang digunakan untuk menemukan network dan melakukan update routing table pada router. Pada jaringan besar yang menggunakan banyak router. Dynamic router merupakan metode yang sering kali digunakan oleh administrator. Dynamic routing membuat jalur yang terbentuk secara otomatis oleh router itu sendiri sesuai dengan konfigurasi yang dibuat.
+Keuntungan menggunakan dynamic routing adalah:
+1.	Hanya mengenalkan alamat yang terhubung langsung dengan routernya.
+2.	Tidak per lu mengetahui semua alamat network yang ada.
+3.	Bila terjadi penambahan/perubahan maka system akan melakukan secara otomatis.
+
+Kekurangan dynamic routing adalah:
+1.	Beban router menjadi lebih berat, dikarenakan setiap saat selalu memperbarui routing table.
+2.	Kecepatan pengenalan dan kelengkapan ip table terbilang lama dikarenakan router membroadcast ke semua jalur/router.
+d.	Metric routing
+Pada beberapa kasung mengenai routing, terdapat beberapa jalur untuk menuju network yang lain. Untuk menentukan best path router, dapat menggunkana metric routing. metric tersebut terdiri dari bebrapa jenis, metric antara protocol routing satu dengan yang lain tidak sama. Sehingga sebuah jalur bisa dianggap best path oleh suatu metode. Berbagai jenis metric yang digunakan oleh protocol routing adalah hop count, cost, bandwidth, load, delay, dan reability.
+
+SOAL
+Permasalahan:
+Salah satu jenis konfigurasi routing adalah dengan mengkonfigurasikannya sebagai default route. Administrator jaringan umum mengarahkan ke default route ke perangkat routing yang memiliki koneksi ke penyedia layanan jaringan. Oleh karena itu, paket tujuan diluar jalur LAN, diteruskan ke perangkat routing dengan koneksi ke penyedia tersebut. bagaimana prinsip kerja default route dalam mengirimkan sebuah paket/data?
+
+Penyelesaian:
+Default route merupakan route yang berlaku apabila tidak ada route lain yang tersedia untuk alamat ip. Jika sebuah paket diterima pada perangkat routing, perangkat akan memeriksa apakah alamat tujuan ip ada di salah satu subnet lokal. jika alamat tujuan tidak lokal, perangkat akan memeriksa table routingnya. Jika subnet tujuan tidak tercantum pada table routing, paket diteruskan ke next hop menuju tujuan yang menggunakan default route.
+
